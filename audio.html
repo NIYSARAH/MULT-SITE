@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module AUDIO - MULTI-SITE</title>
+<style>
+    body {font-family:'Segoe UI',sans-serif; margin:0; color:#1f2937; background:#f3f4f6;}
+    header {
+    background-color: #ff66cc; /* fond rose vif */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    border-bottom: 4px solid #cc33ff; /* bordure violette */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header a {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header a:hover {
+    color: #ffe6ff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    color: #ffe6ff;
+}
+    main{padding:2rem; max-width:1200px;margin:0 auto;}
+    .audio-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem;}
+    .audio-card{background:white;padding:1.5rem; border-radius:15px; box-shadow:0 5px 15px rgba(190,24,93,0.1);}
+    .audio-card h3{color:#9d174d; margin-bottom:1rem;}
+    audio{width:100%; border-radius:10px;}
+    footer{ background: linear-gradient(135deg,#cc33ff,#ff66cc);
+        color:white;
+        text-align:center;
+        padding:2rem;
+        margin-top: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;}
+</style>
+</head>
+<body>
+
+<header>
+    <a href="accueil.html">←<b>ACCUEIL</b></a>
+    <h1>MULTI-SITE</h1>
+    <p>Module AUDIO</p> 
+</header>
+
+<main>
+    <div class="audio-grid">
+        <div class="audio-card">
+            <h3>Piste 1</h3>
+            <audio controls>
+                <source src="media/123.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-card">
+            <h3>Piste 2</h3>
+            <audio controls>
+                <source src="media/45.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-card">
+            <h3>Piste 3 </h3>
+            <audio controls>
+                <source src="media/67.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+</main>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+    © 2026 MULTI-SITE - Plateforme Multimédia
+</footer>
+
+</body>
+</html>
