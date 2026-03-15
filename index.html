@@ -4,105 +4,189 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MULTI-SITE - Plateforme Multimédia</title>
+
 <style>
-  /* Global */
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #fef7fb; /* pastel très clair */
-    margin: 0;
-    color: #3b3b3b;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-/* Header */
-header {
-    background: linear-gradient(135deg, #ffd6e8, #f8b6d2); /* pastel rose/violet */
-    color: #4b2b4d;
-    text-align: center;
-    padding: 3rem 1rem;
-    box-shadow: 0 10px 25px rgba(200,150,200,0.3);
-}
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-header p {
-    font-size: 1.2rem;
-    opacity: 0.8;
+/* BODY */
+body{
+font-family:'Segoe UI',sans-serif;
+background:#fef7fb;
+color:#3b3b3b;
+display:flex;
+flex-direction:column;
+min-height:100vh;
 }
 
-/* Main */
-main {
-    flex: 1;
-    display: grid;
-    place-items: center;
-    padding: 2rem;
+/* HEADER */
+header{
+background:linear-gradient(135deg,#ffd6e8,#f8b6d2);
+color:#4b2b4d;
+text-align:center;
+padding:4rem 1rem 3rem 1rem;
+box-shadow:0 10px 25px rgba(200,150,200,0.3);
 }
 
-/* Module Links */
-.module-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
-    width: 100%;
+header h1{
+font-size:3rem;
+margin-bottom:0.8rem;
+letter-spacing:2px;
 }
 
-.module-btn {
-    background: #ffb6c1; /* rose pastel */
-    color: #4b2b4d;      /* texte doux foncé */
-    padding: 2rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(255,182,193,0.3);
-    transition: all 0.3s;
+header p{
+font-size:1.2rem;
+opacity:0.9;
+max-width:600px;
+margin:auto;
 }
 
-.module-btn:hover {
-    background: #ff99b3; /* légèrement plus foncé au hover */
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(255,182,193,0.5);
+/* MAIN */
+main{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:2rem 1rem;
 }
 
-/* Footer */
-footer {
-    background: linear-gradient(135deg, #f8b6d2, #ffd6e8); /* pastel assorti */
-    color: #4b2b4d;
-    text-align: center;
-    padding: 2rem;
-    font-weight: bold;
+/* MODULE GRID */
+.module-links{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:1.5rem;
+width:100%;
+max-width:1000px;
 }
 
-/* Responsive */
-@media(max-width: 600px) {
-    header h1 {font-size: 2rem;}
-    .module-btn {font-size: 1.2rem; padding: 1.5rem;}
+/* BUTTONS */
+.module-btn{
+background:#ffb6c1;
+color:#4b2b4d;
+padding:2rem;
+font-size:1.5rem;
+font-weight:700;
+text-align:center;
+text-decoration:none;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(255,182,193,0.3);
+transition:0.3s;
+display:block;
 }
+
+.module-btn:hover{
+background:#ff99b3;
+transform:translateY(-5px);
+box-shadow:0 15px 30px rgba(255,182,193,0.5);
+}
+
+/* FOOTER */
+footer{
+background:linear-gradient(135deg,#f8b6d2,#ffd6e8);
+color:#4b2b4d;
+text-align:center;
+padding:1.5rem;
+font-weight:bold;
+}
+
+/* TABLET */
+@media(max-width:900px){
+
+header h1{
+font-size:2.3rem;
+}
+
+header p{
+font-size:1rem;
+}
+
+.module-btn{
+font-size:1.3rem;
+padding:1.7rem;
+}
+
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+header{
+padding:3rem 1rem 2rem 1rem;
+}
+
+header h1{
+font-size:1.9rem;
+}
+
+header p{
+font-size:0.95rem;
+}
+
+.module-links{
+grid-template-columns:1fr;
+gap:1rem;
+}
+
+.module-btn{
+font-size:1.2rem;
+padding:1.5rem;
+border-radius:15px;
+}
+
+footer{
+font-size:0.9rem;
+padding:1.2rem;
+}
+
+}
+
+/* SMALL PHONES */
+@media(max-width:400px){
+
+header h1{
+font-size:1.6rem;
+}
+
+.module-btn{
+font-size:1.1rem;
+padding:1.3rem;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
 <header>
-    <h1>MULTI-SITE</h1>
-    <p>Plateforme Multimédia Interactive - Accédez aux modules</p>
+<h1>MULTI-SITE</h1>
+<p>Plateforme Multimédia Interactive - Accédez aux modules</p>
 </header>
 
 <main>
-    <div class="module-links">
-        <a href="video.html" class="module-btn">Module VIDÉO</a>
-        <a href="audio.html" class="module-btn">Module AUDIO</a>
-        <a href="image.html" class="module-btn">Module IMAGE</a>
-        <a href="jeux.html" class="module-btn">Module JEUX</a>
-    </div>
+
+<div class="module-links">
+
+<a href="video.html" class="module-btn">🎬 Module VIDÉO</a>
+
+<a href="audio.html" class="module-btn">🎵 Module AUDIO</a>
+
+<a href="image.html" class="module-btn">🖼️ Module IMAGE</a>
+
+<a href="jeux.html" class="module-btn">🎮 Module JEUX</a>
+
+</div>
+
 </main>
 
 <footer>
-    © 2026 MULTI-SITE - Plateforme Multimédia
+© 2026 MULTI-SITE - Plateforme Multimédia
 </footer>
 
 </body>
